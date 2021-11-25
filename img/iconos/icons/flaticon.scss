@@ -1,0 +1,45 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?a7f09743bc7d9fd9ef7ab2c5a0fc41e0") format("truetype"),
+url("./flaticon.woff?a7f09743bc7d9fd9ef7ab2c5a0fc41e0") format("woff"),
+url("./flaticon.woff2?a7f09743bc7d9fd9ef7ab2c5a0fc41e0") format("woff2"),
+url("./flaticon.eot?a7f09743bc7d9fd9ef7ab2c5a0fc41e0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?a7f09743bc7d9fd9ef7ab2c5a0fc41e0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "arma-quimica": "\f101",
+    "sable-de-luz": "\f102",
+    "ver": "\f103",
+    "llamada": "\f104",
+    "silla-de-directores": "\f105",
+);
+
+.flaticon-arma-quimica:before {
+    content: map-get($flaticon-map, "arma-quimica");
+}
+.flaticon-sable-de-luz:before {
+    content: map-get($flaticon-map, "sable-de-luz");
+}
+.flaticon-ver:before {
+    content: map-get($flaticon-map, "ver");
+}
+.flaticon-llamada:before {
+    content: map-get($flaticon-map, "llamada");
+}
+.flaticon-silla-de-directores:before {
+    content: map-get($flaticon-map, "silla-de-directores");
+}

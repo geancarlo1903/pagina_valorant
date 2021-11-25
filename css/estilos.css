@@ -1,0 +1,522 @@
+/*font-family: 'Baloo 2', cursive;
+font-family: 'Zen Dots', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Zen+Dots&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive; 
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Zen Dots', cursive;
+}
+
+/*-----------barra de navegacion-----------*/
+nav{
+    width: 100%;
+    height: 70px;
+    background: rgb(0, 0, 0);
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav ul{
+    width: 80%;
+    max-width: 1200px;
+    height: 100%;
+    list-style: none;
+    
+
+    margin: auto;
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+nav ul li{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+nav ul li.logo{
+    padding: 5px;
+    width: 20%;
+}
+.logo a{
+    height: 100%;
+}
+.logo a:hover{
+    background: none;
+    border-bottom: 2px solid brown;
+    border-radius: 5px;
+}
+nav ul li a{
+    color: white;
+    font-family: 'Zen Dots', cursive;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 5px;
+}
+nav ul li a:hover{
+    color: rgb(168, 168, 168);
+    background: brown;
+}
+
+nav ul li a img{
+    height: 100%;
+}
+nav ul li a i{
+    font-size: 1.3em;
+}
+
+/*-----------header-----------*/
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+header .logoSl{
+    position: absolute;
+    left: 80%;
+    top: 15%;
+    width: 200px;
+    z-index: 300;
+}
+
+/*-----------slider-----------*/
+.mascara{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+}
+.mascara .slider{
+    height: 100%;
+    width: 400%;
+    position: relative;
+
+    display: flex;
+    
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+.mascara .slider .cuadros{
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+.mascara .slider .cuadros img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide{
+    0%{left: 0;}
+    15%{left: 0;}
+    
+    25%{left: -100%;}
+    40%{left: -100%;}
+    
+    50%{left: -200%;}
+    65%{left: -200%;}
+    
+    80%{left: -300%;}
+    100%{left: -300%;}
+
+}
+
+
+
+/*-----------section-----------*/
+
+/*unidades views
+ventana vH vW
+*/
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+/*--------sectios mmedia--------*/
+#mmedia{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    padding-top: 120px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#mmedia video{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;;
+}
+#mmedia article{
+    background-color: rgba(165, 156, 156, 0.884);
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+}
+#mmedia article h2{
+    margin-bottom: 20px;
+}
+
+#mmedia .caja_uno{
+    text-align: left;
+}
+#mmedia .caja_uno div{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+}
+#mmedia .caja_uno div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#mmedia .caja_dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+#mmedia .caja_dos audio{
+    width: 100%;
+}
+#mmedia .caja_tres iframe{
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+
+footer{
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding: 30px;
+}  
+/*----------Inicio sinopsios----------*/
+#sinopsis{
+   background-image: url(../img/valorant-wallpaper.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; 
+   background-attachment: fixed;
+
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+#sinopsis article{
+    backdrop-filter: blur(15px);
+    width: 40%;
+    margin: 100px;
+    padding: 40px;
+    border-radius: 40px;
+}
+#sinopsis article h2{
+    font-size: 3em;
+}
+/*------------Inicio director------------*/
+#director{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding: 130px 0px;
+
+}
+#director .columna{
+    column-count: 2;
+    column-gap: 30px;
+    
+}
+
+#director article{
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 30px;;
+    padding: 30px;
+}
+#director article h2{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+#director article p{
+    text-align: justify;
+}
+#director article .imagen{
+    width: 200px;
+    height: 200px;
+
+    clip-path: polygon(50% 20%, 100% 0, 100% 70%, 50% 99%, 0 70%, 0 0);
+    shape-outside: polygon(50% 20%, 100% 0, 100% 70%, 50% 99%, 0 70%, 0 0);
+    shape-margin: 10px;
+
+}
+#director article .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+   
+}
+#director article .uno{
+    float: left;
+    margin-right: 10px;
+}
+#director article .dos{
+    float: right;
+    margin-left: 10px;
+}
+
+
+/*----------Inicio agentes----------*/
+#agentes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    padding: 50px;
+    padding-top: 120px;
+    background-image: url(../img/fondo_agentes.png);
+}
+#agentes h2{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+#agentes figure{
+    width: 30%;
+    min-width: 300px;
+    height: 300px;
+    margin: 20px 10px;
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    box-shadow: 0 20px 20px rgb(68, 68, 68);
+    
+    
+    position: relative;
+}
+#agentes figure img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+
+}
+#agentes figure figcaption{
+    width: 100%;
+    height: 20%;
+    font-size: 2em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 10px 10px 0 0;
+    transition: 0.4s;
+
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desC{
+    display: none;
+}
+#agentes figure:hover figcaption{
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+
+}
+/*-----------Ventana emergente-----------*/
+#ventana_emergente{
+    background-color: rgba(0, 0, 0, 0.918);
+    position: fixed;
+    top:0;
+    z-index: 910;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.open{
+    left: 0;
+}
+.close{
+    left: -120%;
+}
+#ventana_emergente .contenido{
+
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+#ventana_emergente #txt_img{
+    width: 100%;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+#ventana_emergente .contenido .img_tex{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+#ventana_emergente .mascara{
+
+    width: 50%;
+    height: 90%;
+}
+#ventana_emergente .contenido #txt_des{
+    color: white;
+    width: 50%;
+    margin-top: 50px;
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+#ventana_emergente #maxi{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#ventana_emergente .btnX{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3%;
+    height: 5.5%;
+    cursor: pointer;
+}
+#ventana_emergente .btnX img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*----------Formuolario----------*/
+
+#contacto{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#contacto .imgContacto{
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+}
+#contacto .imgContacto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#contacto form{
+    width: 30%;
+    min-width: 500px;
+    margin: auto;
+    padding: 120px 50px 50px 50px;
+}
+
+#contacto form fieldset{
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#contacto form legend{
+    text-align: center;
+    padding: 0 10px;
+}
+
+#contacto form label h1{
+    font-size: 1em;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+#contacto form  legend, label h1{
+    color: white;
+}
+#contacto form input:focus, textarea:focus, select:focus, button:focus {
+    outline: none;
+}
+#contacto form select:focus{
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+#contacto form input, textarea, select, button{
+    border-radius: 10px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid red;
+}
+#contacto form textarea{
+    resize: none;
+
+}
+#contacto form button{
+    background-color: rgb(255, 255, 255);    
+}
+
+/*----------Footer----------*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+footer aside{
+    display: flex;
+    justify-content: space-around;
+
+    width: 300px;
+
+}
+footer a div{
+    width: 50px;
+    height: 50px;
+}
+
+footer a div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
